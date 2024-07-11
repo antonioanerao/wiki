@@ -536,15 +536,15 @@ module.exports = class User extends Model {
     await WIKI.mail.send({
       template: 'accountResetPwd',
       to: email,
-      subject: `Password Reset Request`,
+      subject: `Recupere sua senha`,
       data: {
-        preheadertext: `A password reset was requested for ${WIKI.config.title}`,
-        title: `A password reset was requested for ${WIKI.config.title}`,
-        content: `Click the button below to reset your password. If you didn't request this password reset, simply discard this email.`,
+        preheadertext: `Recuperar senha em ${WIKI.config.title}`,
+        title: `Recuperar senha em ${WIKI.config.title}`,
+        content: `Clique no botão abaixo para redefinir sua senha. Se você não solicitou essa redefinição, ignore este e-mail.`,
         buttonLink: `${WIKI.config.host}/login-reset/${resetToken}`,
-        buttonText: 'Reset Password'
+        buttonText: 'Recuperar Senha'
       },
-      text: `A password reset was requested for wiki ${WIKI.config.title}. Open the following link to proceed: ${WIKI.config.host}/login-reset/${resetToken}`
+      text: `Recupere sua senha em ${WIKI.config.title}. Abra o seguinte link para continuar: ${WIKI.config.host}/login-reset/${resetToken}`
     })
   }
 

@@ -28,10 +28,10 @@ module.exports = {
         await WIKI.mail.send({
           template: 'test',
           to: args.recipientEmail,
-          subject: 'A test email from your wiki',
-          text: 'This is a test email sent from your wiki.',
+          subject: 'Teste de e-mail do seu wiki',
+          text: 'Apenas um teste de e-mail enviado do seu wiki.',
           data: {
-            preheadertext: 'This is a test email sent from your wiki.'
+            preheadertext: 'Apenas um teste de e-mail enviado do seu wiki.'
           }
         })
 
